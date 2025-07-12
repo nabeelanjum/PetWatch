@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 import styles from './styles';
@@ -21,17 +21,33 @@ const Map: React.FC = () => {
     );
   }, []);
 
+  useEffect(() => {
+    getCurrentLocation();
+  }, []);
+
   return (
     <View style={styles.container}>
-      {location ? (
-        <>
-          <AppText>Latitude: {location.latitude}</AppText>
-          <AppText>Longitude: {location.longitude}</AppText>
-        </>
-      ) : (
-        <AppText>Fetching location...</AppText>
-      )}
-      <AppButton title="Refresh Location" onPress={getCurrentLocation} />
+      <AppText style={styles.title}>📍 Your Current Location</AppText>
+
+      <View style={styles.card}>
+        {location ? (
+          <>
+            <View>
+              <AppText>Latitude:</AppText>
+              <AppText style={styles.value}>{location.latitude}</AppText>
+            </View>
+
+            <View>
+              <AppText>Longitude:</AppText>
+              <AppText style={styles.value}>{location.longitude}</AppText>
+            </View>
+          </>
+        ) : (
+          <AppText>Fetching location...</AppText>
+        )}
+      </View>
+
+      <AppButton title="🔄 Refresh Location" onPress={getCurrentLocation} />
     </View>
   );
 };

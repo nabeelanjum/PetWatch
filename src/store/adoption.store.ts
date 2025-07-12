@@ -1,6 +1,7 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
 import { Pet } from '../core/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type AdoptionState = {
   adoptedPets: Pet[];
@@ -20,6 +21,7 @@ const useAdoptionStore = create<AdoptionState>()(
     }),
     {
       name: 'adoption-storage',
+      storage: createJSONStorage(() => AsyncStorage),
     },
   ),
 );

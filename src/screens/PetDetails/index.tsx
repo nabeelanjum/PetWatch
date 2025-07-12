@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Image, ScrollView, View } from 'react-native';
 import styles from './styles';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
@@ -13,6 +13,12 @@ const PetDetails: React.FC = () => {
 
   const pet =
     useRoute<RouteProp<MainStackParamList, 'PetDetails'>>().params?.pet;
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerTitle: pet?.name,
+    });
+  }, [navigation, pet?.name]);
 
   return (
     <ScrollView

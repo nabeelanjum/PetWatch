@@ -7,4 +7,5 @@ export type Pet = {
   color: string;
   gender: string;
   weight: number;
+  imageUrl: string;
 };

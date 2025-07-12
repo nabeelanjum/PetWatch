@@ -15,6 +15,7 @@ const colors = {
   },
   brand: {
     orange: '#F15C5A',
+    lightPurple: '#d0ccff8b',
   },
   font: {
     black: '#221F1F',

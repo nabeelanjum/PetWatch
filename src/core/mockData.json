@@ -7,7 +7,8 @@
     "breed": "Golden Retriever",
     "color": "Golden",
     "gender": "Male",
-    "weight": 30
+    "weight": 30,
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "2",
@@ -17,7 +18,8 @@
     "breed": "Siamese",
     "color": "Cream",
     "gender": "Female",
-    "weight": 5
+    "weight": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "3",
@@ -27,7 +29,8 @@
     "breed": "Canary",
     "color": "Yellow",
     "gender": "Female",
-    "weight": 0.05
+    "weight": 0.05,
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "4",
@@ -37,7 +40,8 @@
     "breed": "Beagle",
     "color": "Tricolor",
     "gender": "Male",
-    "weight": 10
+    "weight": 10,
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "5",
@@ -47,7 +51,8 @@
     "breed": "Maine Coon",
     "color": "Gray",
     "gender": "Male",
-    "weight": 6
+    "weight": 6,
+    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "6",
@@ -57,7 +62,8 @@
     "breed": "African Grey",
     "color": "Gray",
     "gender": "Female",
-    "weight": 0.4
+    "weight": 0.4,
+    "imageUrl": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "7",
@@ -67,7 +73,8 @@
     "breed": "Clownfish",
     "color": "Orange/White",
     "gender": "Male",
-    "weight": 0.02
+    "weight": 0.02,
+    "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "8",
@@ -77,7 +84,8 @@
     "breed": "Dutch",
     "color": "White/Black",
     "gender": "Female",
-    "weight": 2
+    "weight": 2,
+    "imageUrl": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "9",
@@ -87,7 +95,8 @@
     "breed": "Bulldog",
     "color": "Brindle",
     "gender": "Male",
-    "weight": 24
+    "weight": 24,
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": "10",
@@ -97,6 +106,7 @@
     "breed": "Persian",
     "color": "White",
     "gender": "Female",
-    "weight": 4
+    "weight": 4,
+    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
   }
 ]

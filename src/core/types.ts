@@ -8,4 +8,5 @@ export type Pet = {
   gender: string;
   weight: number;
   imageUrl: string;
+  adoptionPrice: number;
 };

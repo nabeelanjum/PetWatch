@@ -8,7 +8,8 @@
     "color": "Golden",
     "gender": "Male",
     "weight": 30,
-    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 250
   },
   {
     "id": "2",
@@ -19,7 +20,8 @@
     "color": "Cream",
     "gender": "Female",
     "weight": 5,
-    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 120
   },
   {
     "id": "3",
@@ -30,7 +32,8 @@
     "color": "Yellow",
     "gender": "Female",
     "weight": 0.05,
-    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 40
   },
   {
     "id": "4",
@@ -41,7 +44,8 @@
     "color": "Tricolor",
     "gender": "Male",
     "weight": 10,
-    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 180
   },
   {
     "id": "5",
@@ -52,7 +56,8 @@
     "color": "Gray",
     "gender": "Male",
     "weight": 6,
-    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 100
   },
   {
     "id": "6",
@@ -63,7 +68,8 @@
     "color": "Gray",
     "gender": "Female",
     "weight": 0.4,
-    "imageUrl": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 90
   },
   {
     "id": "7",
@@ -74,7 +80,8 @@
     "color": "Orange/White",
     "gender": "Male",
     "weight": 0.02,
-    "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 25
   },
   {
     "id": "8",
@@ -85,7 +92,8 @@
     "color": "White/Black",
     "gender": "Female",
     "weight": 2,
-    "imageUrl": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 60
   },
   {
     "id": "9",
@@ -96,7 +104,8 @@
     "color": "Brindle",
     "gender": "Male",
     "weight": 24,
-    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 200
   },
   {
     "id": "10",
@@ -107,6 +116,7 @@
     "color": "White",
     "gender": "Female",
     "weight": 4,
-    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+    "adoptionPrice": 110
   }
 ]

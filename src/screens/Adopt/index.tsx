@@ -30,7 +30,9 @@ const Adopt: React.FC = () => {
         <View style={styles.card}>
           <Image source={{ uri: pet?.imageUrl }} style={styles.image} />
           <AppText style={styles.title}>Adopt {pet?.name}?</AppText>
-          <AppText style={styles.price}>Adoption Fee: $10</AppText>
+          <AppText style={styles.price}>
+            Adoption Fee: ${pet?.adoptionPrice}
+          </AppText>
           <AppButton
             isLoading={isLoading}
             title="💖 Confirm Payment"

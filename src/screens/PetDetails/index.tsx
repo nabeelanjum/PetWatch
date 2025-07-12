@@ -15,7 +15,7 @@ const PetDetails: React.FC = () => {
   const pet = useRoute<RouteProp<MainStackParamList, 'PetDetails'>>().params
     ?.pet as Pet;
 
-  const isAdopted = useAdoptionStore(state => state.isAdopted)(pet.id);
+  const isPetAdopted = useAdoptionStore(state => state.isAdopted(pet.id));
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -65,7 +65,7 @@ const PetDetails: React.FC = () => {
         <AppText>✔️ No special needs</AppText>
       </View>
 
-      {!isAdopted && (
+      {!isPetAdopted && (
         <AppButton
           title="Adopt Me 💞"
           onPress={() =>

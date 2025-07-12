@@ -14,21 +14,21 @@ const Adopt: React.FC = () => {
   const [isLoading, setLoading] = useState(false);
 
   const adoptPet = useAdoptionStore(state => state.adoptPet);
-  const isAdopted = useAdoptionStore(state => state.isAdopted)(pet.id);
+  const isPetAdopted = useAdoptionStore(state => state.isAdopted(pet.id));
 
   const handleAdoption = useCallback(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      if (pet && !isAdopted) {
+      if (pet && !isPetAdopted) {
         adoptPet(pet);
       }
     }, 2000);
-  }, [adoptPet, isAdopted, pet]);
+  }, [adoptPet, isPetAdopted, pet]);
 
   return (
     <View style={styles.container}>
-      {isAdopted ? (
+      {isPetAdopted ? (
         <View style={styles.resultBox}>
           <AppText style={styles.successText}>🎉 Congratulations!</AppText>
           <AppText>You've adopted {pet.name} 🐾</AppText>

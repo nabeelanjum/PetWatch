@@ -5,8 +5,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 10,
-    borderRadius: 12,
+    columnGap: 12,
   },
   image: {
     width: 80,
@@ -14,21 +13,20 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   infoContainer: {
-    marginLeft: 12,
     flex: 1,
+    rowGap: 4,
   },
   name: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   tags: {
     flexDirection: 'row',
-    marginTop: 4,
-    gap: 10,
+    columnGap: 10,
   },
   tag: {
     backgroundColor: colors.brand.lightPurple,
-    paddingHorizontal: 8,
+    paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 100,
     fontSize: 12,

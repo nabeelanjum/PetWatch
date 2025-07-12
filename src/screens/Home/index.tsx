@@ -1,8 +1,8 @@
 import React from 'react';
-import { FlatList, TouchableOpacity, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import mockData from '../../core/mockData.json';
 import styles from './styles';
-import { AppText, PetListItem } from '../../components';
+import { PetListItem } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MainStackParamList } from '../../navigation/MainStack/const';
@@ -17,6 +17,7 @@ const Home: React.FC = () => {
         data={mockData}
         renderItem={({ item }) => <PetListItem pet={item} />}
         keyExtractor={item => item.id}
+        contentContainerStyle={styles.listContentContainer}
       />
     </View>
   );

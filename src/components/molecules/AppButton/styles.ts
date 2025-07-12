@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 50,
   },
+  title: {
+    color: colors.monochrome.white,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
 });
 
 export default styles;

@@ -3,7 +3,7 @@ import { Image, ScrollView, View } from 'react-native';
 import styles from './styles';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { MainStackParamList } from '../../navigation/MainStack/const';
-import { AppText } from '../../components';
+import { AppButton, AppText } from '../../components';
 
 const PetDetails: React.FC = () => {
   const pet =
@@ -50,6 +50,8 @@ const PetDetails: React.FC = () => {
         <AppText>✔️ Loves other pets</AppText>
         <AppText>✔️ No special needs</AppText>
       </View>
+
+      <AppButton title="Adopt Me 💞" />
     </ScrollView>
   );
 };

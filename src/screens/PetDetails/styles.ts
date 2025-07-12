@@ -4,10 +4,10 @@ import colors from '../../core/constants/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
   },
   contentContainer: {
     rowGap: 18,
+    padding: 20,
   },
   image: {
     width: '100%',

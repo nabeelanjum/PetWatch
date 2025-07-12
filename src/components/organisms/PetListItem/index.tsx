@@ -4,9 +4,12 @@ import { Pet } from '../../../core/types';
 import styles from './styles';
 import { AppText } from '../../atoms';
 
-const PetListItem: React.FC<{ pet: Pet }> = ({ pet }) => {
+const PetListItem: React.FC<{ pet: Pet; onPress: () => void }> = ({
+  pet,
+  onPress,
+}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={{ uri: pet.imageUrl }} style={styles.image} />
       <View style={styles.infoContainer}>
         <AppText style={styles.name}>{pet.name}</AppText>

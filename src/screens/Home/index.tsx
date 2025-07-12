@@ -15,7 +15,14 @@ const Home: React.FC = () => {
     <View style={styles.container}>
       <FlatList
         data={mockData}
-        renderItem={({ item }) => <PetListItem pet={item} />}
+        renderItem={({ item }) => (
+          <PetListItem
+            pet={item}
+            onPress={() =>
+              navigation.navigate(SCREENS.PET_DETAILS, { pet: item })
+            }
+          />
+        )}
         keyExtractor={item => item.id}
         contentContainerStyle={styles.listContentContainer}
       />

@@ -13,7 +13,9 @@ const colors = {
     '800': '#2A2A2A',
     '900': '#131313',
   },
-  brand: {},
+  brand: {
+    orange: '#F15C5A',
+  },
   font: {
     black: '#221F1F',
     lighter: '#4E4E4E',

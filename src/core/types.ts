@@ -10,3 +10,8 @@ export type Pet = {
   imageUrl: string;
   adoptionPrice: number;
 };
+
+export type LocationCoordinates = {
+  latitude: number;
+  longitude: number;
+};

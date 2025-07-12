@@ -7,50 +7,53 @@ import { AppButton, AppText } from '../../components';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { SCREENS } from '../../navigation/routes';
 import { Pet } from '../../core/types';
+import useAdoptionStore from '../../store/adoption.store';
 
 const PetDetails: React.FC = () => {
   const navigation = useNavigation<StackNavigationProp<MainStackParamList>>();
 
-  const pet =
-    useRoute<RouteProp<MainStackParamList, 'PetDetails'>>().params?.pet;
+  const pet = useRoute<RouteProp<MainStackParamList, 'PetDetails'>>().params
+    ?.pet as Pet;
+
+  const isAdopted = useAdoptionStore(state => state.isAdopted)(pet.id);
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: pet?.name,
+      headerTitle: pet.name,
     });
-  }, [navigation, pet?.name]);
+  }, [navigation, pet.name]);
 
   return (
     <ScrollView
       style={styles.container}
       contentContainerStyle={styles.contentContainer}
     >
-      <Image source={{ uri: pet?.imageUrl }} style={styles.image} />
+      <Image source={{ uri: pet.imageUrl }} style={styles.image} />
 
       <View style={styles.nameContainer}>
-        <AppText style={styles.name}>{pet?.name}</AppText>
+        <AppText style={styles.name}>{pet.name}</AppText>
         <View style={styles.tags}>
-          <AppText style={styles.tag}>{pet?.type}</AppText>
-          <AppText style={styles.tag}>{pet?.age} years old</AppText>
+          <AppText style={styles.tag}>{pet.type}</AppText>
+          <AppText style={styles.tag}>{pet.age} years old</AppText>
         </View>
       </View>
 
       <AppText style={styles.description}>
-        {pet?.name} is a friendly and energetic {pet?.type.toLowerCase()} who is
+        {pet.name} is a friendly and energetic {pet.type.toLowerCase()} who is
         looking for a loving home!
       </AppText>
 
       <View>
-        {pet?.breed && (
+        {pet.breed && (
           <AppText style={styles.detail}>🐾 Breed: {pet.breed}</AppText>
         )}
-        {pet?.color && (
+        {pet.color && (
           <AppText style={styles.detail}>🎨 Color: {pet.color}</AppText>
         )}
-        {pet?.gender && (
+        {pet.gender && (
           <AppText style={styles.detail}>⚧ Gender: {pet.gender}</AppText>
         )}
-        {pet?.weight && (
+        {pet.weight && (
           <AppText style={styles.detail}>⚖️ Weight: {pet.weight} kg</AppText>
         )}
       </View>
@@ -62,10 +65,14 @@ const PetDetails: React.FC = () => {
         <AppText>✔️ No special needs</AppText>
       </View>
 
-      <AppButton
-        title="Adopt Me 💞"
-        onPress={() => navigation.navigate(SCREENS.ADOPT, { pet: pet as Pet })}
-      />
+      {!isAdopted && (
+        <AppButton
+          title="Adopt Me 💞"
+          onPress={() =>
+            navigation.navigate(SCREENS.ADOPT, { pet: pet as Pet })
+          }
+        />
+      )}
     </ScrollView>
   );
 };

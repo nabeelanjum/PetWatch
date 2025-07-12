@@ -4,34 +4,41 @@ import { MainStackParamList } from '../../navigation/MainStack/const';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import styles from './styles';
 import { AppButton, AppText } from '../../components';
+import useAdoptionStore from '../../store/adoption.store';
+import { Pet } from '../../core/types';
 
 const Adopt: React.FC = () => {
-  const pet = useRoute<RouteProp<MainStackParamList, 'Adopt'>>().params?.pet;
+  const pet = useRoute<RouteProp<MainStackParamList, 'Adopt'>>().params
+    ?.pet as Pet;
 
   const [isLoading, setLoading] = useState(false);
-  const [adopted, setAdopted] = useState(false);
+
+  const adoptPet = useAdoptionStore(state => state.adoptPet);
+  const isAdopted = useAdoptionStore(state => state.isAdopted)(pet.id);
 
   const handleAdoption = useCallback(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      setAdopted(true);
+      if (pet && !isAdopted) {
+        adoptPet(pet);
+      }
     }, 2000);
-  }, []);
+  }, [adoptPet, isAdopted, pet]);
 
   return (
     <View style={styles.container}>
-      {adopted ? (
+      {isAdopted ? (
         <View style={styles.resultBox}>
           <AppText style={styles.successText}>🎉 Congratulations!</AppText>
-          <AppText>You've adopted {pet?.name} 🐾</AppText>
+          <AppText>You've adopted {pet.name} 🐾</AppText>
         </View>
       ) : (
         <View style={styles.card}>
-          <Image source={{ uri: pet?.imageUrl }} style={styles.image} />
-          <AppText style={styles.title}>Adopt {pet?.name}?</AppText>
+          <Image source={{ uri: pet.imageUrl }} style={styles.image} />
+          <AppText style={styles.title}>Adopt {pet.name}?</AppText>
           <AppText style={styles.price}>
-            Adoption Fee: ${pet?.adoptionPrice}
+            Adoption Fee: ${pet.adoptionPrice}
           </AppText>
           <AppButton
             isLoading={isLoading}

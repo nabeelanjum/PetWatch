@@ -28,7 +28,7 @@ const AppButton: React.FC<AppButtonProps> = ({
       disabled={disabled || isLoading}
     >
       {isLoading ? (
-        <ActivityIndicator />
+        <ActivityIndicator color={colors.monochrome.white} />
       ) : (
         <AppText style={styles.title}>{title}</AppText>
       )}

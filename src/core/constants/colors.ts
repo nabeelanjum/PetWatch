@@ -14,7 +14,10 @@ const colors = {
     '900': '#131313',
   },
   brand: {
-    orange: '#F15C5A',
+    orange: '#ff914d',
+    lightOrange: '#fbe0cfff',
+    green: '#28a745',
+    lightGreen: '#e0ffee',
     lightPurple: '#d0ccff8b',
   },
   font: {

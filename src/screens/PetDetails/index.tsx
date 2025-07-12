@@ -1,11 +1,16 @@
 import React from 'react';
 import { Image, ScrollView, View } from 'react-native';
 import styles from './styles';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { MainStackParamList } from '../../navigation/MainStack/const';
 import { AppButton, AppText } from '../../components';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { SCREENS } from '../../navigation/routes';
+import { Pet } from '../../core/types';
 
 const PetDetails: React.FC = () => {
+  const navigation = useNavigation<StackNavigationProp<MainStackParamList>>();
+
   const pet =
     useRoute<RouteProp<MainStackParamList, 'PetDetails'>>().params?.pet;
 
@@ -51,7 +56,10 @@ const PetDetails: React.FC = () => {
         <AppText>✔️ No special needs</AppText>
       </View>
 
-      <AppButton title="Adopt Me 💞" />
+      <AppButton
+        title="Adopt Me 💞"
+        onPress={() => navigation.navigate(SCREENS.ADOPT, { pet: pet as Pet })}
+      />
     </ScrollView>
   );
 };
